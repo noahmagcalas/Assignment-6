@@ -1,33 +1,7 @@
-h1
-{
-    text-align: center;
-    margin-top: 30px;
-    background-size:cover;
-}
 
-/* Add background image and color the font. */
-body
-{
-    background-image: url('Dojo.png');
-    background-size: contain;
+body {
+    background-image: url('Dojo.jpeg');
+    height: 100vh;
     background-repeat: no-repeat;
-}
-
-table {
-    border-spacing: 5px;
-    margin: 0 auto; /* Center align the table horizontally */
-    padding:5px;
-}
-
-th, td, tr{
-    background-color:dimgray;
-    text-align:center;
-}
-
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Set the height of the container to the full viewport height */
-    font-size: 20px;
+    background-size: cover;
 }

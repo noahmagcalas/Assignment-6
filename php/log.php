@@ -32,6 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['date'] = $row[2];
         $_SESSION['pnum'] = $row[3];
 
+        echo "session values:<br>";
+        echo $_SESSION['username']." ";
+        echo $_SESSION['first']." ";
+        echo $_SESSION['last']." ";
+        echo $_SESSION['date']." ";
+        echo $_SESSION['pnum']." ";
+
         header("Location: member.php");
         exit();
     } else {

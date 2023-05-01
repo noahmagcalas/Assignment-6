@@ -10,7 +10,6 @@
     <?php
 
     include('../html/header_alt.html');
-    include('../html/footer.html');
 
     $sessID = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab';
     session_id($sessID);
@@ -31,7 +30,6 @@
     {
         header("Location: login.php");
 
-        unset($_SESSION['username']);
         session_destroy();
 
         header("Location: login.php");
@@ -42,6 +40,6 @@
 
     <a href="signup_program.php">Enroll in a program</a>
 
-    <!-- access php vars anywhere as long as you use these tags <?php ?> -->
-    <?php $fname; ?>
+    <?php include('../html/footer.html'); ?>
+
 </body>

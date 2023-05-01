@@ -17,17 +17,22 @@
     margin-bottom: 2px;
 }
 
-body, form {
-    padding: 100px;
+form {
+    margin: 100px;
 }
 
-#home {
-    background-image: url('Dojo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-weight: bold;
+i {
+    margin: 5px;
 }
 
 #submit {
     width: 100%;
+}
+
+body {
+    padding: 100px;
+}
+
+.card {
+    margin: 25px;
 }
