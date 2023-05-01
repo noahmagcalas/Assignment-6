@@ -80,14 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_close($database);
 
-        // redirect to member page or maybe enrollment success screen?
+        header('member.php');
 
         exit();
     } else {
         echo '<h1>Error!</h1><p id="err_msg">The following error(s) occurred:<br>';
         foreach ($errors as $msg)
             echo " - $msg<br>";
-        echo "Please try again.</p>";
         mysqli_close($database);
     }
 }

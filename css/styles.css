@@ -1,19 +1,10 @@
-﻿
-.navbar-collapse {
+﻿.navbar-collapse {
     justify-content: flex-end;
-}
-
-.navbar {
-    background-color: white;
 }
 
 .navbar-brand {
     font-size: 2rem;
     font-weight: bold;
-}
-
-form {
-    margin: 2rem;
 }
 
 .form-select {
@@ -26,8 +17,15 @@ form {
     margin-bottom: 2px;
 }
 
-body {
+body, form {
     padding: 100px;
+}
+
+#home {
+    background-image: url('Dojo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
 }
 
 #submit {

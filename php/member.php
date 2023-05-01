@@ -24,7 +24,7 @@
         $phone = $_SESSION['pnum'];
 
         echo "Welcome, " . $fname . " " . $lname."<br>";
-        echo "Today's Date: ".$date."<br>";
+        echo "Date Joined: ".$date."<br>";
         echo "Phone #: ".$phone."<br>";
     }
     else

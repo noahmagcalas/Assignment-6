@@ -1,21 +1,4 @@
-header.html
-- name of school
-- has sign in/up links
-- sign out if user is logged in
-
-footer.html
-- social media
-- names?
-
-
-
-signup_program.html
-- adds member data to the ENROLLMENTS database
-- redirects member back to member page on successful registration
-
-home.php
-- header, footer, school name, image
-- links to sign up/sign in/sign out
+------------ TODO -----------------
 
 member.php
 - displays member info in a table
@@ -23,10 +6,6 @@ member.php
     + phone #
     + date joined
 - displays payments made and their dates
-- button to enroll?
-
-signup_program.html
-- allows member to enroll in karate program
 
 admin.html/php???
 - login to personal page
@@ -44,3 +23,19 @@ signup_membership.html
 - adds user data to the MEMBERS database
 - redirects user to member page on successful registration
 
+signup_program.html
+- adds payment data to the PAYMENTS database
+- adds member data to the ENROLLMENTS database
+- redirects member back to member page on successful registration
+
+header.html
+- name of school
+- has sign in/up links
+- sign out if user is logged in
+
+footer.html
+- social media
+
+home.php
+- header, footer, school name, image
+- links to sign up/sign in/sign out
