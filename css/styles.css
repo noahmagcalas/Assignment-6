@@ -1,0 +1,35 @@
+﻿
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar {
+    background-color: white;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    margin: 2rem;
+}
+
+.form-select {
+    width: auto;
+}
+
+.form-control {
+    border: 1px solid;
+    border-color: gray;
+    margin-bottom: 2px;
+}
+
+body {
+    padding: 100px;
+}
+
+#submit {
+    width: 100%;
+}
