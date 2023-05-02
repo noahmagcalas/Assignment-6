@@ -37,8 +37,8 @@
 
                         echo "<td>$fname</td>
                                 <td>$lname</td>
-                                <td>$date</td>
-                                <td>$phone</td>";
+                                <td>$phone</td>
+                                <td>$pnum</td>";
                     } else {
                         header("Location: login.php");
 
