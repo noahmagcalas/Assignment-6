@@ -4,6 +4,11 @@ $page_title = 'Register';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 { 
+
+    $sessID = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab';
+    session_id($sessID);
+    session_start();
+
     require ('connect.php');
 
     $errors = array();
@@ -20,12 +25,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $r = @mysqli_query($database, $q);
         if (mysqli_num_rows($r) != 0) $errors[] = 'Phone number already registered. <a href="member.php">Member Info</a>';
     }
-    
+
     if (empty($errors)) {
         $date = date("Y-m-d");
         $q = "INSERT INTO Members (Username, Last_Name, First_Name, Phone, Date_Joined, Passwordd) VALUES ('$user', '$lname', '$fname', '$phone', '$date', '$pass')";
         $r = @mysqli_query($database, $q);
-        if ($r) echo '<h1>Registered!</h1><p>You are now registered.</p><p><a href="member.php">Member Info</a></p>';
+        if ($r && $_SESSION['admin'] ) {
+            header("Location: admin.php");
+            exit();
+        }
+        elseif ($r) echo '<h1>Registered!</h1><p>You are now registered.</p><p><a href="member.php">Member Info</a></p>';
         else echo ($database -> error);
 
         mysqli_close($database);

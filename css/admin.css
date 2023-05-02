@@ -1,0 +1,23 @@
+﻿th {
+    width: 2rem;
+}
+
+.delete {
+    padding: 0px;
+}
+
+
+.icon-input-btn{
+    display: inline-block;
+    position: relative;
+}
+
+.icon-input-btn input[type="submit"]{
+    padding-left: 2em;
+}
+
+.icon-input-btn .bi{
+    display: inline-block;
+    position: absolute;
+    left: 0.65em;
+}

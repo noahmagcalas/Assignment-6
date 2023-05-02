@@ -45,7 +45,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-block create-account">Sign Up</button>
+                <button type="submit" class="btn btn-primary btn-block create-account">Sign Up</button>
             </div>
 
             <div class="container text-center justify-content-center">

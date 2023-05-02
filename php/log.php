@@ -12,6 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = trim($user);
     $pass = trim($pass);
 
+    if ($user == 'admin' && $pass == 'password')
+    {
+        $_SESSION['admin'] = true;
+
+        header("Location: admin.php");
+        exit();
+    }
+
     include('connect.php');
 
     $q = "SELECT * FROM Members WHERE Username='$user' AND Passwordd='$pass'";
@@ -21,16 +29,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $_SESSION['username'] = $user;
 
-        include('connect.php');
+        $query = "SELECT ID, First_Name, Last_Name, Date_Joined, Phone FROM Members WHERE Username='$user'";
+        $result = $database -> query($query);
+        $row = $result -> fetch_array(MYSQLI_NUM);
 
-        $query = "SELECT First_Name, Last_Name, Date_Joined, Phone FROM Members WHERE Username='$user'";
-        $result = $database->query($query);
-        $row = $result->fetch_array(MYSQLI_NUM);
-
-        $_SESSION['first'] = $row[0];
-        $_SESSION['last'] = $row[1];
-        $_SESSION['date'] = $row[2];
-        $_SESSION['pnum'] = $row[3];
+        $_SESSION['first'] = $row[1];
+        $_SESSION['last'] = $row[2];
+        $_SESSION['date'] = $row[3];
+        $_SESSION['pnum'] = $row[4];
+        $_SESSION['id'] = $row[0];
 
         echo "session values:<br>";
         echo $_SESSION['username']." ";

@@ -17,64 +17,77 @@
 
 <body>
 
+    <?php include('../html/header_alt.html') ?>
+
     <form action="register_program.php" method="post">
         <div class="card">
 
             <div class="card-body px-5 py-5">
 
-                <h1>PLEASE REGISTER ME FOR:</h1>
+                <h3 class="text-center">PLEASE REGISTER ME FOR:</h3>
+
+                <br>
 
                 <div class="form-check">
                     <input class="form-check-input" name="program" type="radio" value="program1" id="new">
                     <label class="form-check-label" for="program1">
-                        The Tiny Tigers
+                        The <b>Tiny Tigers</b>
                     </label>
+                    Program focuses on exposing 2 and 3yr old's to a classroom setting and helping them to begin
+                    learning basic motor skills, listening, and focus skills.
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" name="program" type="radio" value="program2" id="old">
                     <label class="form-check-label" for="program2">
-                        The Little Ninjas
+                        The <b>Little Ninjas</b>
                     </label>
+                    Program focuses on 4 - 10 years old. Program is improving basic motor skills, listening, and focus
+                    skills.
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" name="program" type="radio" value="program3" id="new">
                     <label class="form-check-label" for="program3">
-                        Junior Program
+                        The <b>Junior</b>
                     </label>
+                    Program focuses on 11 - 16 years old. Program system is designed with the new student in mind,
+                    educating them from Beginner to Advanced Technician over the life of the training.
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" name="program" type="radio" value="program4" id="old">
                     <label class="form-check-label" for="program4">
-                        Defense and Tactical Training
+                        <b>Defense and Tactical Training</b>
                     </label>
+                    Program focused on educating individuals to effectively maintain the safety and well-being of
+                    themselves and their families in any situation that could occur.
                 </div>
 
-                <label for="instructor">Select Instructor:</label>
-                <select class="form-control form-select rounded-0" id="instructor" name="instructor" required>
-                    <option disabled selected>Choose instructor</option>
-                    <?php
+                <br>
+                
+                <span>
+                    <label for="instructor">Select Instructor:</label>
+                    <select class="form-control form-select rounded-0" id="instructor" name="instructor" required>
+                        <option disabled selected>Choose instructor</option>
+                        <?php
 
-                    include('connect.php');
+                        include('connect.php');
 
-                    $query = "SELECT * FROM Instructors";
-                    $result = $database -> query($query);
-                    
-                    if ($result -> num_rows > 0)
-                    {
-                        while ($row = $result -> fetch_assoc())
-                        {
-                            echo "<option>".$row["InstructorName"]."</option>";
+                        $query = "SELECT * FROM Instructors";
+                        $result = $database->query($query);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<option>" . $row["InstructorName"] . "</option>";
+                            }
+                        } else {
+                            echo "broken";
                         }
-                    }
-                    else
-                    {
-                        echo "broken";
-                    }
 
-                    $database -> close();
+                        $database->close();
 
-                    ?>
-                </select>
+                        ?>
+                    </select>
+                    </span>
+
 
                 <div class="justify-content-center">
                     <input class="btn btn-primary" id="submit" type="submit" value="Enroll" />

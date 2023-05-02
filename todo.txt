@@ -1,24 +1,6 @@
 
-Use SESSION to display the First and the Last name of the
-current(logged in) Member.
-
-Display “Sign out” link on the Members and Karate Program Registration Form files.
-  “Sign out” link should execute logout.php file.
-This file should delete all elements of the SESSION array
-and the control flow should  be redirected to the home page.
-	4
-Develop Login page 	5
-Develop Registration page 	10
 Register 8 Members. 	5
 Enroll Members to different Programs. 	5
-  	 
-Step 9. Develop a Web page for the System Administrator. 	 
-1.      Login to his/her own home page. 	4
-2.      View the List of instructors. 	4
-3.      Delete or Add instructors. 	4
-4.      View the List of members. 	4
-5.      Delete, Update, or Add a new member. 	6
-6.      Search for a member by LastName or ID.
 
 
 -------------------- DONE -----------------------
@@ -29,5 +11,23 @@ Develop a Footer page(“footer.html”). 	3
 
 Develop a Home page. Add header file, footer file,
 name for your  Karate School, and image.
-Also include links for “Sign up” and “Sign in”.
-	10
+Also include links for “Sign up” and “Sign in”. 10
+
+Use SESSION to display the First and the Last name of the
+current(logged in) Member.
+
+Display “Sign out” link on the Members and Karate Program Registration Form files.
+  “Sign out” link should execute logout.php file.
+  This file should delete all elements of the SESSION array
+and the control flow should  be redirected to the home page.	4
+
+Develop Login page 	5
+Develop Registration page 	10
+
+Step 9. Develop a Web page for the System Administrator. 	 
+1.      Login to his/her own home page. 	4
+2.      View the List of instructors. 	4
+3.      Delete or Add instructors. 	4
+4.      View the List of members. 	4
+5.      Delete, Update, or Add a new member. 	6
+6.      Search for a member by LastName or ID.
