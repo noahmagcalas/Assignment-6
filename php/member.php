@@ -136,6 +136,20 @@
                         $memberID = $row["Member_Id"];
                         $paymentID = $row["Payment_Id"];
                         $programName = $row["ProgramName"];
+                        switch ($programName)
+                        {
+                            case "program1":
+                                $programName = "Tiny Tigers";
+                                break;
+                            case "program2":
+                                $programName = "Little Ninjas";
+                                break;
+                            case "program3":
+                                $programName = "Junior";
+                                break;
+                            case "program4":
+                                $programName = "Defense and Tactical Training";
+                        }
                         $instructorID = $row['Instructor_Id'];
 
                         echo "<tr>";

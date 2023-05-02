@@ -29,7 +29,7 @@
                 <br>
 
                 <div class="form-check">
-                    <input class="form-check-input" name="program" type="radio" value="program1" id="new">
+                    <input class="form-check-input" name="program" type="radio" value="program1" required>
                     <label class="form-check-label" for="program1">
                         The <b>Tiny Tigers</b>
                     </label>
@@ -37,7 +37,7 @@
                     learning basic motor skills, listening, and focus skills.
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="program" type="radio" value="program2" id="old">
+                    <input class="form-check-input" name="program" type="radio" value="program2" required>
                     <label class="form-check-label" for="program2">
                         The <b>Little Ninjas</b>
                     </label>
@@ -45,7 +45,7 @@
                     skills.
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="program" type="radio" value="program3" id="new">
+                    <input class="form-check-input" name="program" type="radio" value="program3" required>
                     <label class="form-check-label" for="program3">
                         The <b>Junior</b>
                     </label>
@@ -53,7 +53,7 @@
                     educating them from Beginner to Advanced Technician over the life of the training.
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" name="program" type="radio" value="program4" id="old">
+                    <input class="form-check-input" name="program" type="radio" value="program4" required>
                     <label class="form-check-label" for="program4">
                         <b>Defense and Tactical Training</b>
                     </label>
@@ -62,10 +62,10 @@
                 </div>
 
                 <br>
-                
+
                 <span>
                     <label for="instructor">Select Instructor:</label>
-                    <select class="form-control form-select rounded-0" id="instructor" name="instructor" required>
+                    <select class="form-control form-select rounded-0" name="instructor" required>
                         <option disabled selected>Choose instructor</option>
                         <?php
 
@@ -86,7 +86,7 @@
 
                         ?>
                     </select>
-                    </span>
+                </span>
 
 
                 <div class="justify-content-center">
